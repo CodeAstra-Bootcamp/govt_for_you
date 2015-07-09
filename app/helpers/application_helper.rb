@@ -1,4 +1,16 @@
 module ApplicationHelper
+  def resource_name
+    :user
+  end
+ 
+  def resource
+    @resource ||= User.new
+  end
+ 
+  def devise_mapping
+    @devise_mapping ||= Devise.mappings[:user]
+  end
+  
   def flash_tag(msg, msg_type)
     return unless msg.present?
     if msg_type == "notice"

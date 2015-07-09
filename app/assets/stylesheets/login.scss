@@ -1,0 +1,19 @@
+#devise-enter {
+  form {
+    input.btn {
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .remember_me_wrapper {
+      margin: 25px 0 47px;
+    }
+  }
+
+  a.devise_link {
+    text-align: center;
+    display: block;
+    margin-top: 1em;
+  }
+}
