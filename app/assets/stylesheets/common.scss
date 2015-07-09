@@ -23,6 +23,16 @@ body {
   position: relative;
   min-height: 100vh;
 
+  &.guest_user {
+    aside {
+      display: none;
+    }
+
+    #main_content {
+      padding: 0 15px;
+    }
+  }
+
   aside {
     color: $sidebar-color;
     height: 100vh;
@@ -104,6 +114,13 @@ body {
 
       a {
         font-weight: bold;
+
+        &.logout {
+          display: block;
+          text-align: center;
+          font-weight: normal;
+          margin-bottom: 2em;
+        }
       }
     }
   }

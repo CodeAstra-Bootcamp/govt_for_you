@@ -1,6 +1,6 @@
 <%= render partial: 'common/head' %>
 <body>
-<div id="content_wrapper">
+<div id="content_wrapper" class="<%= user_signed_in? ? 'loggedin' : 'guest_user' %>">
   <%= render 'common/sidebar' %>
   <div id="main_content">
     <div class="flash_messages">
