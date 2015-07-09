@@ -1,0 +1,27 @@
+#land {
+  background-image: image-url('land-bg.jpg');
+  background-size: cover;
+  color: $light-font-color;
+
+  .vcenter {
+    h1, h2 {
+      font-weight: 300;
+    }
+
+    h1 {
+      margin: 0 0;
+      font-size: 6vw;
+
+      #usp {
+        &, span {
+          background-color: transparent !important;
+        }
+      }
+    }
+
+    h2 {
+      margin: 0.3em 0 0 0;
+      font-size: 3vw;
+    }
+  }
+}
