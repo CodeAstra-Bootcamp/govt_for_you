@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>GovtForYou</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
+<%= render partial: 'common/head' %>
 <body>
+<%= render 'common/header' %>
 
-<%= yield %>
+<div id="content_wrapper">
+  <div class="container">
+    <div class="flash_messages">
+      <%= flash_tag(notice, "notice") %>
+      <%= flash_tag(alert, "alert") %>
+    </div>
+    <%= yield %>
+  </div>
+</div>
+
+<%= render 'common/footer' %>
 
 </body>
 </html>
