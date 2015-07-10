@@ -1,5 +1,11 @@
 <%= link_to "Submit New Appeal", new_appeal_path, class: "page_action" %>
-<h1>My Appeals</h1>
+<h1>
+  <% if @public_list %>
+    Public Appeals
+  <% else %>
+    My Appeals
+  <% end %>
+</h1>
 
 <div id="appeals">
   <% if @appeals.any? %>

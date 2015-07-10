@@ -2,7 +2,12 @@ class AppealsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @appeals = current_user.appeals
+    if params[:public]
+      @public_list = true
+      @appeals = Appeal.all
+    else
+      @appeals = current_user.appeals
+    end
   end
 
   def new

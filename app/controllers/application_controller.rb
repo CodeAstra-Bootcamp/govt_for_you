@@ -10,5 +10,6 @@ protected
     return unless user_signed_in?
 
     @appeals_count = current_user.appeals.count
+    @public_appeals_count = Appeal.count
   end
 end
