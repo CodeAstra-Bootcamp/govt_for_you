@@ -5,6 +5,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
 .slide {
   width: 100%;
   height: 100vh;
@@ -18,6 +22,11 @@ body {
   transform: translateY(-50%);
 }
 
+form {
+  label {
+    font-weight: 400;
+  }
+}
 
 #content_wrapper {
   position: relative;
@@ -128,6 +137,100 @@ body {
   #main_content {
     border: 1px solid transparent;
     box-sizing: border-box;
-    padding: 0 15px 0 255px ;
+    padding: 0 15px 0 255px;
+
+    a.page_action {
+      display: inline-block;
+      float: right;
+      margin: 20px 3px 0 0;
+      background-color: $primary-color;
+      color: $light-font-color;
+      font-weight: 300;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      transition: background-color 0.3s ease-in;
+
+      &:hover {
+        background-color: darken($primary-color, 5%);
+      }
+    }
+  }
+}
+
+.action-links-boxes {
+  .action-box {
+    a {
+      display: block;
+      text-align: center;
+      border-bottom: 12px solid transparent;
+      color: $light-font-color;
+      font-weight: 300;
+      font-size: 1.3em;
+      padding: 2em 0;
+      text-decoration: none;
+      position: relative;
+      transition: background-color 0.3s ease-in;
+
+      .number {
+        font-size: 4em;
+      }
+
+      i.fa {
+        position: absolute;
+        bottom: 0.2em;
+        right: 0.2em;
+        font-size: 3em;
+        transition: bottom 0.3s ease-in;
+      }
+
+      &:hover i.fa {
+        bottom: 0.5em;
+      }
+    }
+
+    &.action-box-1 {
+      a{
+        background-color: $special-color-1;
+        border-color: $special-darker-color-1;
+
+        i.fa {
+          color: lighten($special-color-1, 20%);
+        }
+
+        &:hover {
+          background-color: lighten($special-color-1, 10%);
+        }
+      }
+    }
+
+    &.action-box-2 {
+      a{
+        background-color: $special-color-2;
+        border-color: $special-darker-color-2;
+
+        i.fa {
+          color: lighten($special-color-2, 20%);
+        }
+
+        &:hover {
+          background-color: lighten($special-color-2, 10%);
+        }
+      }
+    }
+
+    &.action-box-3 {
+      a {
+        background-color: $special-color-3;
+        border-color: $special-darker-color-3;
+
+        i.fa {
+          color: lighten($special-color-3, 20%);
+        }
+
+        &:hover {
+          background-color: lighten($special-color-3, 10%);
+        }
+      }
+    }
   }
 }

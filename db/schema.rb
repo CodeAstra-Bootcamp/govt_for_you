@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150709140616) do
+ActiveRecord::Schema.define(version: 20150709205950) do
+
+  create_table "appeals", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "appeal_type"
+    t.integer  "department"
+    t.string   "subject"
+    t.text     "description"
+    t.boolean  "private",     default: true
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "appeals", ["user_id"], name: "index_appeals_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

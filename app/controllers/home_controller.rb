@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def land
     if user_signed_in?
-      render :dashboard
+      redirect_to appeals_path
     else
       render layout: "land"
     end

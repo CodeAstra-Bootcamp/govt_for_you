@@ -1,0 +1,111 @@
+<h1>MyGovt Stats</h1>
+
+<div id="stats" class="well">
+  <div class="container-fluid">
+    
+  </div>
+
+  <div class="container-fluid">
+    <div>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#last-week" aria-controls="home" role="tab" data-toggle="tab">Last Week</a></li>
+        <li role="presentation"><a href="#last-month" aria-controls="profile" role="tab" data-toggle="tab">Last Month</a></li>
+        <li role="presentation"><a href="#last-year" aria-controls="messages" role="tab" data-toggle="tab">Last Year</a></li>
+        <li role="presentation"><a href="#all-time" aria-controls="settings" role="tab" data-toggle="tab">All Time</a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="last-week">
+          <%= action_links_boxes_tags(
+                [
+                  {
+                    link: '#',
+                    text: "<div class='number'>6</div><div class='description'>appeals submitted</div>",
+                    fa_icon: "plus-circle"
+                  },
+                  {
+                    link: "#",
+                    text: "<div class='number'>8</div><div class='description'>appeals delivered</div>",
+                    fa_icon: "pause"
+                  },
+                  {
+                    link: "#",
+                    text: "<div class='number'>79</div><div class='description'>percent discipline</div>",
+                    fa_icon: "question-circle"
+                  }
+                ]
+              )
+            %>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="last-month">
+          <%= action_links_boxes_tags(
+                [
+                  {
+                    link: '#',
+                    text: "<div class='number'>25</div><div class='description'>appeals submitted</div>",
+                    fa_icon: "plus-circle"
+                  },
+                  {
+                    link: "#",
+                    text: "<div class='number'>18</div><div class='description'>appeals delivered</div>",
+                    fa_icon: "pause"
+                  },
+                  {
+                    link: "#",
+                    text: "<div class='number'>64</div><div class='description'>percent discipline</div>",
+                    fa_icon: "question-circle"
+                  }
+                ]
+              )
+            %>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="last-year">
+          <%= action_links_boxes_tags(
+                [
+                  {
+                    link: '#',
+                    text: "<div class='number'>306</div><div class='description'>appeals submitted</div>",
+                    fa_icon: "plus-circle"
+                  },
+                  {
+                    link: "#",
+                    text: "<div class='number'>134</div><div class='description'>appeals delivered</div>",
+                    fa_icon: "pause"
+                  },
+                  {
+                    link: "#",
+                    text: "<div class='number'>73</div><div class='description'>percent discipline</div>",
+                    fa_icon: "question-circle"
+                  }
+                ]
+              )
+            %>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="all-time">
+          <%= action_links_boxes_tags(
+                [
+                  {
+                    link: '#',
+                    text: "<div class='number'>1297</div><div class='description'>appeals submitted</div>",
+                    fa_icon: "plus-circle"
+                  },
+                  {
+                    link: "#",
+                    text: "<div class='number'>649</div><div class='description'>appeals delivered</div>",
+                    fa_icon: "pause"
+                  },
+                  {
+                    link: "#",
+                    text: "<div class='number'>78</div><div class='description'>percent discipline</div>",
+                    fa_icon: "question-circle"
+                  }
+                ]
+              )
+            %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

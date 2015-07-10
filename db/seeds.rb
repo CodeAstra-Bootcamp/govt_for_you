@@ -6,9 +6,26 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-user = User.find_or_create_by(email: "citizen@mygovt.herokuapp.com") do |usr|
-  usr.password = "secret123"
-  usr.password_confirmation = "secret123"
+emails = ["citizen@mygovt.herokuapp.com", "anothercitizen@mygovt.herokuapp.com"]
+emails.each do |email|
+  User.find_or_create_by(email: email) do |usr|
+    usr.password = "secret123"
+    usr.password_confirmation = "secret123"
+  end
 end
 
-user.confirm!
+User.all.each do |usr|
+  usr.confirm!
+end
+
+
+usr = User.where(email: "anothercitizen@mygovt.herokuapp.com").first
+(1..16).each do |i|
+  appeal = usr.appeals.new
+  appeal.subject = "Public Appeal #{i}"
+  appeal.description = "Public Appeal Description #{i}"
+  appeal.appeal_type = Appeal::AppealType.all.sample.code
+  appeal.department = Appeal::Department.all.sample.code
+  appeal.private = false
+  appeal.save!
+end

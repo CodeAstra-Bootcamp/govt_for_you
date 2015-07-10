@@ -1,0 +1,120 @@
+#appeals {
+  .no-results {
+    padding: 25px 20px 45px;
+    margin-top: 2em;
+
+    p {
+      font-size: 1.5em;
+      font-weight: 300;
+      margin-bottom: 1em;
+    }
+  }
+
+  .appeal {
+    a.details {
+      float: right;
+      margin-top: 1em;
+      background-color: $primary-color;
+      color: $light-font-color;
+      display: inline-block;
+      text-decoration: none;
+      padding: 0.5em 1em;
+      font-weight: 300;
+
+    }
+  }
+}
+
+#new_appeal {
+  p.intro {
+    font-size: 1.1em;
+    font-weight: 300;
+    margin-bottom: 1em;
+  }
+}
+
+#appeal {
+  #track {
+    padding: 60px 30px;
+    position: relative;
+
+    hr {
+      border-color: #66B032;
+      border-width: 3px;
+    }
+
+    .node {
+      position: absolute;
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      top: 74px;
+      left: 25px;
+      box-sizing: border-box;
+      border: 2px solid #66B032;
+      background-color: $light-font-color;
+
+      &.done {
+        background-color: #66B032;
+      }
+
+      &.active {
+        width: 40px;
+        height: 40px;
+        top: 61px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          top: 11px;
+          left: 11px;
+          box-sizing: border-box;
+          border: 2px solid #66B032;
+          background-color: #66B032;
+        }
+      }
+
+      &.node2 {
+        left: 15%;
+      }
+
+      &.node3 {
+        left: 25%;
+      }
+
+      &.node4 {
+        left: 55%;
+      }
+
+      &.node5 {
+        left: 90%;
+      }
+
+      &.node6 {
+        left: auto;
+        right: 25px;
+      }
+    }
+  }
+}
+
+#stats {
+  .nav-tabs > li > a {
+    background-color: $light-font-color;
+    color: $primary-color;
+  }
+
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background-color: $primary-color;
+    color: $light-font-color;
+  }
+
+  .action-links-boxes {
+    margin-top: 3em;
+  }
+}

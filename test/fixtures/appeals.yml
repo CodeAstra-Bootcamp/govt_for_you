@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: appeals
+#
+#  id          :integer          not null, primary key
+#  user_id     :integer
+#  appeal_type :integer
+#  department  :integer
+#  subject     :string
+#  description :text
+#  private     :boolean          default(TRUE)
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  appeal_type: 1
+  department: 1
+  subject: MyString
+  description: MyText
+  private: false
+
+two:
+  user_id: 
+  appeal_type: 1
+  department: 1
+  subject: MyString
+  description: MyText
+  private: false

@@ -43,6 +43,7 @@ group :development, :test do
   gem 'guard'
   gem 'guard-rails'
   gem 'guard-livereload', require: false
+  gem 'annotate'
 end
 
 group :production do

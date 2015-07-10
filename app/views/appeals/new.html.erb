@@ -1,0 +1,16 @@
+<h1>Submit a New Appeal</h1>
+
+<section id="new_appeal" class="well">
+  <p class="intro">
+    Please be as detailed as possible. Submit all the required documents as attachments. This form will be automatically saved. You can come back later and finish it. Appeals that are not submitted for 30 day after last edit will be automatically deleted.
+  </p>
+  <%= simple_form_for @appeal do |f| %>
+    <%= f.input :appeal_type, collection: Appeal::AppealType.all, label_method: :text, value_method: :code, prompt: "Select the type of your appeal" %>
+    <%= f.input :department, collection: Appeal::Department.all, label_method: :text, value_method: :code, prompt: "Select the department your appeal belongs to" %>
+    <%= f.input :subject %>
+    <%= f.input :description, hint: "Please be as specific as you can" %>
+    <%= f.input :private, label: "Keep this appeal private", hint: "Public appeals can be viewed by others and may receive social support" %>
+    <%= f.input :agree_terms, as: :boolean, hint: raw("By checking this, you agree that you have read the <a href='#'>Terms &amp; Conditions</a>") %>
+    <%= f.submit %>
+  <% end %>
+</section>

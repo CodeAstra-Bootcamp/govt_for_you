@@ -1,0 +1,48 @@
+<h1>My Appeal</h1>
+
+<article id="appeal" class="appeal well">
+  <%= action_links_boxes_tags(
+        [
+          {
+            link: '#',
+            text: "<div class='number'>6</div><div class='description'>days since appeal</div>",
+            fa_icon: "plus-circle"
+          },
+          {
+            link: "#",
+            text: "<div class='number'>2</div><div class='description'>days since idle</div>",
+            fa_icon: "pause"
+          },
+          {
+            link: "#",
+            text: "<div class='number'>34</div><div class='description'>days left</div>",
+            fa_icon: "question-circle"
+          }
+        ]
+      )
+  %>
+  <div class="container-fluid">
+    <h2><%= @appeal.subject %></h2>
+    <div class="description">
+      <%= @appeal.description %>
+
+      <section id="track">
+        <hr>
+        <span class="node node1 done" data-toggle="popover" data-placement="bottom" title="Dispense Clerk" data-content="<dl><dt>In time</dt> <dd>2:34pm July 3, 2015</dd> <dt>Out time</dt> <dd>11:47am July 4, 2015</dd> <dt>Delivery</dt> <dd>1 day in advance</dd> <dt>Comments</dt> <dd>Good to go.</dd> </dl>"></span>
+        <span class="node node2 done" data-toggle="popover" data-placement="bottom" title="Range Officer" data-content="<dl> <dt>In time</dt> <dd>11:47am July 4, 2015</dd> <dt>Out time</dt> <dd>12:03am July 4, 2015</dd> <dt>Delivery</dt> <dd>3 day in advance</dd> <dt>Comments</dt> <dd>Forwarding to Divisional Officer.</dd> </dl>"></span>
+        <span class="node node3 active" data-toggle="popover" data-placement="bottom" title="Divisional Officer" data-content="<dl> <dt>In time</dt> <dd>12:03am July 4, 2015</dd> <dt>Out time</dt> <dd>N/A</dd> <dt>Delivery</dt> <dd>3 day delayed</dd> <dt>Comments</dt> <dd>Needs conservator's say. Waiting for his word.</dd> </dl>"></span>
+        <span class="node node4" data-toggle="popover" data-placement="bottom" title="Conservator" data-content="<dl> <dt>Expected in time</dt> <dd>July 17, 2015</dd> </dl>"></span>
+        <span class="node node5" data-toggle="popover" data-placement="bottom" title="Chief Conservator" data-content="<dl> <dt>Expected in time</dt> <dd>July 22, 2015</dd> </dl>"></span>
+        <span class="node node6" data-toggle="popover" data-placement="bottom" title="Dispense Clerk" data-content="<dl> <dt>Expected in time</dt> <dd>July 23, 2015</dd> </dl>"></span>
+      </section>
+      <h3>History:</h3>
+      <ul>
+        <li>Moved to Mr. John Jaffa (Field Officer) 3 days ago</li>
+        <li>Moved to Mr. Sitaiah (Ops Clerk) 4 days ago</li>
+        <li>Assigned to Mr. Rajamanikyam (Superintendent) 5 days ago</li>
+        <li>Assigned to <%= @appeal.department_name %> 6 days ago</li>
+        <li>Appealed 6 days ago</li>
+      </ul>
+    </div>
+  </div>
+</article>

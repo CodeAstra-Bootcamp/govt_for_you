@@ -1,0 +1,62 @@
+<%= link_to "Submit New Appeal", new_appeal_path, class: "page_action" %>
+<h1>
+  <% if @public_list %>
+    Public Appeals
+  <% else %>
+    My Appeals
+  <% end %>
+</h1>
+
+<div id="appeals">
+  <% if @appeals.any? %>
+    <div class="stats well">
+      <%= action_links_boxes_tags(
+        [
+          {
+            link: '#',
+            text: "<div class='number'>#{@appeals.count}</div><div class='description'>open appeal</div>",
+            fa_icon: "external-link"
+          },
+          {
+            link: "#",
+            text: "<div class='number'>3</div><div class='description'>actions required</div>",
+            fa_icon: "hand-o-up"
+          },
+          {
+            link: "#",
+            text: "<div class='number'>3</div><div class='description'>closed appeals</div>",
+            fa_icon: "times-circle-o"
+          }
+        ]
+      )
+  %>
+    </div>
+    <%= render @appeals %>
+  <% else %>
+    <div class="well no-results">
+      <p class="container-fluid">
+        You did not submit an appeal yet. Get involved by doing one of the following:
+      </p>
+      <%= action_links_boxes_tags(
+            [
+              {
+                link: new_appeal_path,
+                text: "Submit a <br> New Appeal",
+                fa_icon: "user"
+              },
+              {
+                link: "#",
+                text: "View <br> Public Appeals",
+                fa_icon: "users"
+              },
+              {
+                link: "#",
+                text: "View <br> MyGovt Stats",
+                fa_icon: "line-chart"
+              }
+            ]
+          )
+      %>
+    </div>
+  <% end %>
+</div>
