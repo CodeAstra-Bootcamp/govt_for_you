@@ -1,0 +1,38 @@
+<h1>My Appeal</h1>
+
+<article class="appeal well">
+  <%= action_links_boxes_tags(
+        [
+          {
+            link: '#',
+            text: "<div class='number'>6</div><div class='description'>days since appeal</div>",
+            fa_icon: "plus-circle"
+          },
+          {
+            link: "#",
+            text: "<div class='number'>2</div><div class='description'>days since idle</div>",
+            fa_icon: "pause"
+          },
+          {
+            link: "#",
+            text: "<div class='number'>34</div><div class='description'>days left</div>",
+            fa_icon: "question-circle"
+          }
+        ]
+      )
+  %>
+  <div class="container-fluid">
+    <h2><%= @appeal.subject %></h2>
+    <div class="description">
+      <%= @appeal.description %>
+      <h3>History:</h3>
+      <ul>
+        <li>Moved to Mr. John Jaffa (Field Officer) 3 days ago</li>
+        <li>Moved to Mr. Sitaiah (Ops Clerk) 4 days ago</li>
+        <li>Assigned to Mr. Rajamanikyam (Superintendent) 5 days ago</li>
+        <li>Assigned to <%= @appeal.department_name %> 6 days ago</li>
+        <li>Appealed 6 days ago</li>
+      </ul>
+    </div>
+  </div>
+</article>

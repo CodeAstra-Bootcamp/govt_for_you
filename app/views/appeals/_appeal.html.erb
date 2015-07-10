@@ -1,0 +1,7 @@
+<article class="appeal well">
+  <div class="container-fluid">
+    <%= link_to "Details", appeal_path(appeal), class: 'details' %>
+    <h3><%= appeal.subject %></h3>
+    <p>Appealed to <%= appeal.department_name %> on <%= appeal.created_at.strftime('%e %b, %Y') %></p>
+  </div>
+</article>

@@ -26,4 +26,24 @@ module ApplicationHelper
       end + msg
     end
   end
+
+  # +boxes_data+ is an array of hashes with keys: link, text and fa_icon
+  def action_links_boxes_tags(boxes_data)
+    inner_content = ""
+    boxes_data.each_index do |i|
+      inner_content += action_link_box_tag(boxes_data[i], i+1)
+    end
+
+    content_tag(:div, class: "container-fluid") do
+      content_tag(:div, class: "row action-links-boxes") do
+        raw inner_content
+      end
+    end
+  end
+
+  def action_link_box_tag(box_data, index)
+    content_tag(:div, class: "col-md-4 action-box action-box-#{index}") do
+      link_to(raw(box_data[:text] + content_tag(:i, "", class: "fa fa-#{box_data[:fa_icon]}")), box_data[:link])
+    end
+  end
 end

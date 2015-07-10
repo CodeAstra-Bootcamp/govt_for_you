@@ -3,33 +3,54 @@
 
 <div id="appeals">
   <% if @appeals.any? %>
+    <div class="stats well">
+      <%= action_links_boxes_tags(
+        [
+          {
+            link: '#',
+            text: "<div class='number'>#{@appeals.count}</div><div class='description'>open appeal</div>",
+            fa_icon: "external-link"
+          },
+          {
+            link: "#",
+            text: "<div class='number'>3</div><div class='description'>actions required</div>",
+            fa_icon: "hand-o-up"
+          },
+          {
+            link: "#",
+            text: "<div class='number'>3</div><div class='description'>closed appeals</div>",
+            fa_icon: "times-circle-o"
+          }
+        ]
+      )
+  %>
+    </div>
+    <%= render @appeals %>
   <% else %>
     <div class="well no-results">
       <p class="container-fluid">
         You did not submit an appeal yet. Get involved by doing one of the following:
       </p>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-4 involve_action">
-            <a href="<%= new_appeal_path %>" id="involve_new_appeal">
-              Submit a <br> New Appeal
-              <i class="fa fa-user"></i>
-            </a>
-          </div>
-          <div class="col-md-4 involve_action">
-            <a href="#" id="involve_public_appeals">
-              View <br> Public Appeals
-              <i class="fa fa-users"></i>
-            </a>
-          </div>
-          <div class="col-md-4 involve_action">
-            <a href="#" id="involve_stats">
-              View <br> MyGovt Stats
-              <i class="fa fa-line-chart"></i>
-            </a>
-          </div>
-        </div>
-      </div>
+      <%= action_links_boxes_tags(
+            [
+              {
+                link: new_appeal_path,
+                text: "Submit a <br> New Appeal",
+                fa_icon: "user"
+              },
+              {
+                link: "#",
+                text: "View <br> Public Appeals",
+                fa_icon: "users"
+              },
+              {
+                link: "#",
+                text: "View <br> MyGovt Stats",
+                fa_icon: "line-chart"
+              }
+            ]
+          )
+      %>
     </div>
   <% end %>
 </div>

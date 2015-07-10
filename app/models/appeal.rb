@@ -48,4 +48,8 @@ class Appeal < ActiveRecord::Base
   attr_accessor :agree_terms
 
   belongs_to :user
+
+  def department_name
+    Department.all.select{|dept| dept.code == self.department}[0].text + " Department"
+  end
 end
