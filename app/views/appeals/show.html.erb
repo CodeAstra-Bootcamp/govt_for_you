@@ -1,6 +1,6 @@
 <h1>My Appeal</h1>
 
-<article class="appeal well">
+<article id="appeal" class="appeal well">
   <%= action_links_boxes_tags(
         [
           {
@@ -25,6 +25,16 @@
     <h2><%= @appeal.subject %></h2>
     <div class="description">
       <%= @appeal.description %>
+
+      <section id="track">
+        <hr>
+        <span class="node node1 done"></span>
+        <span class="node node2 done"></span>
+        <span class="node node3 active"></span>
+        <span class="node node4"></span>
+        <span class="node node5"></span>
+        <span class="node node6"></span>
+      </section>
       <h3>History:</h3>
       <ul>
         <li>Moved to Mr. John Jaffa (Field Officer) 3 days ago</li>
