@@ -102,3 +102,19 @@
     }
   }
 }
+
+#stats {
+  .nav-tabs > li > a {
+    background-color: $light-font-color;
+    color: $primary-color;
+  }
+
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background-color: $primary-color;
+    color: $light-font-color;
+  }
+
+  .action-links-boxes {
+    margin-top: 3em;
+  }
+}

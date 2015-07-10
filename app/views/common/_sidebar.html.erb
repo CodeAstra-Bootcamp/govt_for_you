@@ -7,7 +7,7 @@
   <section id="links">
     <%= sidebar_link("My Appeals", appeals_path, 'user', @appeals_count) %>
     <%= sidebar_link("Public Appeals", appeals_path(public: true), 'users', @public_appeals_count) %>
-    <%= sidebar_link("Statistics", '#', 'line-chart') %>
+    <%= sidebar_link("MyGovt Stats", stats_appeals_path, 'line-chart') %>
   </section>
 
   <footer>

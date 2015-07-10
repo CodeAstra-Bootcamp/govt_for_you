@@ -27,6 +27,10 @@ class AppealsController < ApplicationController
     @appeal = Appeal.find(params[:id])
   end
 
+  def stats
+    
+  end
+
 private
   def appeal_params
     params.require(:appeal).permit(:appeal_type, :department, :subject, :description, :private)
