@@ -5,7 +5,7 @@
   </header>
 
   <section id="links">
-    <%= sidebar_link("My Appeals", '#', 'user', 2) %>
+    <%= sidebar_link("My Appeals", appeals_path, 'user', @appeals_count) %>
     <%= sidebar_link("Public Appeals", '#', 'users', '200+') %>
     <%= sidebar_link("Statistics", '#', 'line-chart') %>
   </section>

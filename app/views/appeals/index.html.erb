@@ -1,0 +1,35 @@
+<%= link_to "Submit New Appeal", new_appeal_path, class: "page_action" %>
+<h1>My Appeals</h1>
+
+<div id="appeals">
+  <% if @appeals.any? %>
+  <% else %>
+    <div class="well no-results">
+      <p class="container-fluid">
+        You did not submit an appeal yet. Get involved by doing one of the following:
+      </p>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 involve_action">
+            <a href="<%= new_appeal_path %>" id="involve_new_appeal">
+              Submit a <br> New Appeal
+              <i class="fa fa-user"></i>
+            </a>
+          </div>
+          <div class="col-md-4 involve_action">
+            <a href="#" id="involve_public_appeals">
+              View <br> Public Appeals
+              <i class="fa fa-users"></i>
+            </a>
+          </div>
+          <div class="col-md-4 involve_action">
+            <a href="#" id="involve_stats">
+              View <br> MyGovt Stats
+              <i class="fa fa-line-chart"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

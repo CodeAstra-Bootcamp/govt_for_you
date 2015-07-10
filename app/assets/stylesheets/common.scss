@@ -5,6 +5,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
 .slide {
   width: 100%;
   height: 100vh;
@@ -18,6 +22,11 @@ body {
   transform: translateY(-50%);
 }
 
+form {
+  label {
+    font-weight: 400;
+  }
+}
 
 #content_wrapper {
   position: relative;
@@ -128,6 +137,22 @@ body {
   #main_content {
     border: 1px solid transparent;
     box-sizing: border-box;
-    padding: 0 15px 0 255px ;
+    padding: 0 15px 0 255px;
+
+    a.page_action {
+      display: inline-block;
+      float: right;
+      margin: 20px 3px 0 0;
+      background-color: $primary-color;
+      color: $light-font-color;
+      font-weight: 300;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      transition: background-color 0.3s ease-in;
+
+      &:hover {
+        background-color: darken($primary-color, 5%);
+      }
+    }
   }
 }

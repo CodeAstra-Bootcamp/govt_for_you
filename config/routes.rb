@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get 'login' => 'home#login', as: :login
 
+  resources :appeals
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

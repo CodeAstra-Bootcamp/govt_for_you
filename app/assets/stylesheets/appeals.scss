@@ -1,0 +1,86 @@
+#appeals {
+  .no-results {
+    padding: 25px 20px 45px;
+    margin-top: 2em;
+
+    p {
+      font-size: 1.5em;
+      font-weight: 300;
+      margin-bottom: 1em;
+    }
+
+    .involve_action {
+      a {
+        display: block;
+        text-align: center;
+        border-bottom: 12px solid transparent;
+        color: $light-font-color;
+        font-weight: 300;
+        font-size: 1.3em;
+        padding: 2em 0;
+        text-decoration: none;
+        position: relative;
+        transition: background-color 0.3s ease-in;
+
+        i.fa {
+          position: absolute;
+          bottom: 0.2em;
+          right: 0.2em;
+          font-size: 3em;
+          transition: bottom 0.3s ease-in;
+        }
+
+        &:hover i.fa {
+          bottom: 0.5em;
+        }
+
+        &#involve_new_appeal {
+          background-color: #2ecc71;
+          border-color: #27ae60;
+
+          i.fa {
+            color: lighten(#2ecc71, 20%);
+          }
+
+          &:hover {
+            background-color: lighten(#2ecc71, 10%);
+          }
+        }
+
+        &#involve_public_appeals {
+          background-color: #3498db;
+          border-color: #2980b9;
+
+          i.fa {
+            color: lighten(#3498db, 20%);
+          }
+
+          &:hover {
+            background-color: lighten(#3498db, 10%);
+          }
+        }
+
+        &#involve_stats {
+          background-color: #e67e22;
+          border-color: #d35400;
+
+          i.fa {
+            color: lighten(#e67e22, 20%);
+          }
+
+          &:hover {
+            background-color: lighten(#e67e22, 10%);
+          }
+        }
+      }
+    }
+  }
+}
+
+#new_appeal {
+  p.intro {
+    font-size: 1.1em;
+    font-weight: 300;
+    margin-bottom: 1em;
+  }
+}
